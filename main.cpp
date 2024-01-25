@@ -189,3 +189,108 @@ using std::map;
 //     cout<< input << " is " << answer ; 
 //  }
 
+//====================================================================
+
+// int main()
+// {
+//     int age;
+
+//     cout<< "Please type in your age : ";
+//     cin>> age;
+
+//     if(age >= 21 && age <= 39)
+//     {
+//         cout<< "You are eligible for the treatment.";
+//     }
+//     else if(age< 21)
+//     {
+//         cout<<"Sorry , you are to young for the treatment.";
+//     }
+//     else
+//     {
+//         cout<< "Sorry , you are too old for the treatment.";
+//     }
+
+
+// }
+
+//==============================================================
+
+// int main() {
+//     map<string, int> Day{
+//         {"Monday", 1},
+//         {"Tuesday", 2},
+//         {"Wednesday", 3},
+//         {"Thursday", 4},
+//         {"Friday", 5},
+//         {"Saturday", 6},
+//         {"Sunday", 7}
+//     };
+
+//     int answer;
+//     cout << "Which day is today [1: Monday, ..., 7: Sunday]: ";
+//     cin >> answer;
+
+//     bool validInput = false;
+
+//     // Iterate through the map to find the matching value for the input
+//     for (const auto& pair : Day) {
+//         if (pair.second == answer) {
+//             cout << "Today is " << pair.first << "Let's have some fun." << endl;
+//             validInput = true;
+//             break;
+//         }
+//     }
+
+//     if (!validInput) {
+//         cout <<answer<< " is not a valid day.Bye! " << endl;
+//     }
+
+//     return 0;
+// }
+
+//========================================================
+
+// int main() {
+//     map<string, int> Day{
+//         {"Monday", 1},
+//         {"Tuesday", 2},
+//         {"Wednesday", 3},
+//         {"Thursday", 4},
+//         {"Friday", 5},
+//         {"Saturday", 6},
+//         {"Sunday", 7}
+//     };
+
+//     int answer;
+//     int answer2;
+
+//     cout << "Which day is today [1: Monday, ..., 7: Sunday]: ";
+//     cin >> answer;
+
+//     for (const auto& pair : Day) {
+//         if (pair.second == answer) {
+//             cout << "Today is " << pair.first << endl;
+//             cout << "How many days have passed up to today: ";
+//             cin >> answer2;
+
+//             break; // Exit the loop after finding the current day
+//         }
+//     }
+
+//     // Adjust the value considering the circular nature of days
+//     int adjustedValue = (answer - answer2 + 7) % 7;
+
+//     // Find the day corresponding to the adjusted value
+//     string adjustedDay;
+//     for (const auto& pair : Day) {
+//         if (pair.second == adjustedValue) {
+//             adjustedDay = pair.first;
+//             break;
+//         }
+//     }
+
+//     cout << "If we went " << answer2 << " days in the past we would hit a " << adjustedDay << endl;
+
+//     return 0;
+// }
